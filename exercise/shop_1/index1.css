@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 75px;
+}
+#intro{
+    height: 100%;
+    display: grid;
+
+    grid-template: "logo menu" 1fr / 1fr 1fr;
+}
+
+.logo{
+    height: 100%;
+    background-color: #fbfbfb;
+    grid-area: logo;
+    height: 75px;
+    line-height: 75px;
+    margin-left:50px;
+}
+header a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+
+}
+main a img:hover{
+    transform: scale(1.3,1.3);
+    transition-duration: 0.4s;
+}
+main .line{
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+}
+ul {
+    height: 100%;
+    font-weight: bold;
+    list-style: none;
+    font-size: 20px;
+    grid-area: menu;
+    display: grid;
+    grid-template: "one two three" 1fr / 1fr 1fr 1fr;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+}
+
+ul .one {
+    background-color: #efeff6;
+    grid-area: one;
+}
+main .item{
+    width: 50%;
+}
+ul .two {
+    background-color: #dcdcec;
+    grid-area: two;
+}
+
+ul .three {
+    background-color: #cbcae3;
+    grid-area: three;
+}
+main .one {
+    background-color: #532fa1;
+}
+main .two {
+    background-color: #a44789;
+}
+main .three {
+    background-color: #3ab6bc;
+}
+#footer{
+    margin: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#footer div{
+    text-align: center;
+}
+@media (max-width:760px){
+    main .item{
+        width: 100%;
+    }
+}

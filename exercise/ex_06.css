@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: gray;
+    border: 2px solid red;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.box6{
+    flex-grow: 2;
+    order: -1;
+}
+
+.box7{
+    align-self: center;
+}
+
+.container div{
+    background-color: skyblue;
+    border: 1px dotted yellow;
+    color: blueviolet;
+    width: 50px;
+}

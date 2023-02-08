@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+   height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.mainBanner{
+    height: 20%;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: gray;
+    height: 30%;
+    /* 늘어는 값 맥스 정할 수 있다 */
+    max-width: 1320px;
+    display: flex;
+}
+
+.sidebar{
+ background-color: yellow;
+ width: 170px;
+}
+.contents{
+background-color: green;
+/* 방법1 한쪽은 고정값 다른쪽은 flex-grow 1 부모영역까지 채워준다 */
+/* flex-grow: 1; */
+/* width: 100%; */
+/* 전체 영역에서 사이드바 만큼 뺀것을 아이템 영역으로 하겠다  */
+width: calc( 100% - 170px );
+}

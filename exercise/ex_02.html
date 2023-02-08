@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>복합선택자 조합</title>
+    <style>
+        nav{
+            margin: 100px;
+        }
+        body{
+            background-color: rebeccapurple;
+        }
+        .li1{color: red;}
+        ul li {color: green;}
+        ul > .li4{color:orange}
+        .li1 + .li2{color:yellow; background-color: black;}
+        .li1 ~ .li5 {color: blue;}
+        </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="li1">홈</li>
+            <li class="li2">로그인</li>
+            <li class="li3">회원가입</li>
+            <li class="li4">게시판</li>
+            <li class="li5">질의응답</li>
+        </ul>
+    </nav>
+</body>
+</html>

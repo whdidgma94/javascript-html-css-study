@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+      </style>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            border: none;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: aqua;
+        }
+        .grid{
+            display: grid;    
+            height: 100vh;
+            gap: 10px;
+            grid-template: 
+            "header header header header" 50px
+            "nav main main main" 1fr
+            "footer footer footer footer" 100px
+        }
+        .header{
+            display: grid;
+            place-items: center;
+            background-color: indianred;
+            grid-area: header;
+        }
+        .main{
+            display: grid;
+            place-items: center;
+            background-color: sandybrown;
+            grid-area: main;
+        }
+        .nav{
+            display: grid;
+            place-items: center;
+            background-color: seagreen;
+            grid-area: nav;
+        }
+        .footer{
+            display: grid;
+            place-items: center;
+            background-color: cornflowerblue;
+            grid-area: footer;
+        }
+        span{
+            color: aliceblue;
+        }
+        @media screen and (max-width: 600px) {
+            div{
+                font-size: 3rem;
+            }
+            .grid{
+                grid-template: 
+            "header" 80px
+            "nav"0.5fr
+            "main"2fr
+            "footer" 150px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">
+            <span>header</span> 
+        </div>
+        <div class="main">
+            <span>main</span> 
+        </div>
+        <div class="nav">
+            <span>nav</span> 
+        </div>
+        <div class="footer">
+            <span>footer</span> 
+        </div>
+    </div>
+</body>
+</html>

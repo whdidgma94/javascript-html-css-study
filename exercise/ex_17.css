@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    margin: 30px 0;
+}
+.box{
+    width: 600px;
+    height: 120px;
+    margin: 0 20px;
+    text-align: center;
+    background :linear-gradient(red, orange);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box span{
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+}
+.text1{
+    transition: all 0.4s ease-in-out;
+}
+.text2{
+    transition: all 0.4s ease-in-out 0.1s;
+}
+.text3{
+    transition: all 0.4s ease-in-out 0.2s;
+}
+.text4{
+    transition: all 0.4s ease-in-out 0.3s;
+}
+.text5{
+    transition: all 0.4s ease-in-out 0.4s;
+}
+.text6{
+    transition: all 0.4s ease-in-out 0.5s;
+}
+.text7{
+    transition: all 0.4s ease-in-out 0.6s;
+}
+.text8{
+    transition: all 0.4s ease-in-out 0.7s;
+}
+.text9{
+    transition: all 0.4s ease-in-out 0.8s;
+}
+
+.box:hover span{
+    transform: translateY(-20px);
+}
+.heart svg{
+    width: 42px;
+    height: 42px;
+    color: red;
+    animation: heartBeat 1s ease-in-out infinite;
+}
+.star svg{
+    width: 42px;
+    height: 42px;
+    color: orange;
+    animation: spinStar 4s ease-in-out infinite;
+}
+.rotate svg{
+    width: 42px;
+    height: 42px;
+    animation: rotate 2s none infinite;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinStar{
+    0%{
+        transform: rotateY( 0deg );
+    }
+    100%{
+        transform: rotateY( 360deg );
+    }
+}
+@keyframes heartBeat{
+    0%{
+        transform: scale(1.2);
+    }
+    70%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}

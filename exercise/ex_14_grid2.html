@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            border: 1px solid black;
+            color: white;
+        }
+        .grid{
+            display: grid;
+            height: 100vh;
+            grid-template: 
+            "header header header header" 1fr
+            "content content content nav" 4fr
+            "footer footer footer footer" 1fr
+            ;
+        }
+        .header{
+            background-color: coral;
+            grid-area: header;
+        }
+        .content{
+            background-color: skyblue;
+            grid-area: content;
+        }
+        .nav{
+            background-color: greenyellow;
+            grid-area: nav;
+        }
+        .footer{
+            background-color: violet;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">header</div>
+        <div class="content">content</div>
+        <div class="nav">nav</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

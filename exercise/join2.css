@@ -1,0 +1,144 @@
+/* 
+블럭요소는 높이 크기만 먼저 설정하면 된다 
+
+*/
+:root {
+    --main-color: #0068FF;
+}
+/* 
+디폴트로 하고 시작하자 
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 
+전체영역으로 잡는다 
+*/
+html,
+body {
+    height: 100%;
+}
+/* 
+블럭요소는 높이만 잡아줘도 된다 
+*/
+.wrap {
+    background-color: white;
+    font-family: 'Noto Sans CJK KR';
+    margin: 100px 100px;
+    text-align: center;
+}
+
+.container {
+
+    background: #FFFFFF;
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+    /* background-color: lightblue; */
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: pink; */
+    padding-right: 20px;
+    text-align: left;
+}
+
+/* 
+font-weight : 굵게 가능 
+*/
+
+.content_header {
+    
+    font-size: 11px;
+    color: #0068FF;
+    align-self: flex-start;
+    /*단독 배치 : 세로 방향 변경*/
+    margin: 50px;
+    /* background-color: yellow; */
+}
+
+.content_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: lightblue; */
+    margin: 0 50px;
+}
+
+.content_title {
+    font-size: 0.7em;
+    color: gray;
+    /* background-color: green; */
+    margin-top: 10px;
+}
+
+.content_row{
+    width: 450px;
+    height: 100px;
+    /* background-color: lightgray; */
+}
+
+input[type="text"]{
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.content_row:nth-child(5){
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    /* background-color: lightpink */
+}
+
+input[type="text"]:hover{
+    border-bottom: 1px solid var(--main-color);
+}
+
+input[type="radio"]{
+    margin-left: 20px;
+}
+
+.chk_agree{
+    font-size: 12px;
+    align-self: center;
+}
+
+
+.content_footer{
+    width: 80%;
+    /* background-color: aqua; */
+}
+
+.content_line {
+    border-top: 1px solid #eeeeee;
+    margin: 30px 0px;
+}
+
+button {
+
+    height: 75px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #0068FF;
+    border-radius: 10px;
+
+    font-size: 15px;
+    color: var(--main-color);
+    display: block;
+    margin-bottom: 20px;
+}
