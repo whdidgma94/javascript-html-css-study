@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1, .box2{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        img{
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <div class="box1">
+            <span draggable="true"> 텍스트 </span>
+            <img src="./item1.jpeg" alt="조명">
+        </div>
+        <div class="box2"></div>
+    </div>
+    <script>
+        const img = document.querySelector('img');
+        const text = document.querySelector('span');
+        const box1 = document.querySelector('.box1');
+        const box2 = document.querySelector('.box2');
+        box2.addEventListener('dragover',e=>e.preventDefault());
+        box2.addEventListener('drop',e=>{
+            box2.appendChild(text);
+            box2.appendChild(img);
+        })
+        box1.addEventListener('dragover',e=>e.preventDefault());
+        box1.addEventListener('drop',e=>{
+            box1.appendChild(text);
+            box1.appendChild(img);
+        })
+    </script>
+</body>
+</html>

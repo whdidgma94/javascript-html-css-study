@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <button> 중지 </button>
+    <script>
+        let cnt = 0;
+        const btn = document.querySelector('button');
+        const time = setInterval(()=>{
+            cnt++;
+            document.querySelector("h1").innerHTML = cnt;
+        },10);
+        window.addEventListener('load',()=>{
+            time();
+        });
+        btn.addEventListener('click',()=>{
+            clearInterval(time);
+        })
+    </script>
+</body>
+</html>

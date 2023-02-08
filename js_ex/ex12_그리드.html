@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding:0;
+        }
+        .container{
+            width: 800px; height: 800px;
+        }
+        ul{
+            display: grid;
+            height: 100%;                  
+                               
+            grid-template-columns: repeat(3,1fr);
+            grid-template-areas: 
+            "a a a"
+            "b . ."
+            "c d e"
+            ;
+
+        }
+        .item{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            border: 1px solid salmon;
+        }
+        .container :nth-child(2n){
+            background-color: lightblue;
+            border: 1px solid cadetblue;
+        }
+        li:nth-child(1){
+            grid-area: a;
+        }
+        li:nth-child(2){
+            grid-area: b;
+        }
+        li:nth-child(3){
+            grid-area: c;
+        }
+        li:nth-child(4){
+            grid-area: d;
+        }
+        li:nth-child(5){
+            grid-area: e;
+        }
+ 
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="gridContainer">
+            <li class="item">1</li>
+            <li class="item">2</li>
+            <li class="item">3</li>
+            <li class="item">4</li>
+            <li class="item">5</li>
+        </ul>
+    </div>
+</body>
+</html>
