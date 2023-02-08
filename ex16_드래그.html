@@ -19,6 +19,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+
         }
         img{
             width: 50%;
@@ -36,20 +38,43 @@
         <div class="box2"></div>
     </div>
     <script>
-        const img = document.querySelector('img');
-        const text = document.querySelector('span');
-        const box1 = document.querySelector('.box1');
-        const box2 = document.querySelector('.box2');
-        box2.addEventListener('dragover',e=>e.preventDefault());
-        box2.addEventListener('drop',e=>{
-            box2.appendChild(text);
-            box2.appendChild(img);
-        })
-        box1.addEventListener('dragover',e=>e.preventDefault());
-        box1.addEventListener('drop',e=>{
-            box1.appendChild(text);
-            box1.appendChild(img);
-        })
+        const img = document.querySelector("img");
+        const text = document.querySelector("span");
+        const box1 = document.querySelector(".box1");
+        const box2 = document.querySelector(".box2");
+        let done = true;
+   
+        box1.addEventListener("dragstart",changeBox());
+        box2.addEventListener("dragstart",changeBox());
+        
+        function changeBox(){
+            let box = done? box2:box1;
+
+            box.addEventListener('dragover', e=> e.preventDefault());
+            box.addEventListener('drop',e=>{
+           // let clone = img.cloneNode();
+            box.appendChild(text);
+            box.appendChild(img);
+            })
+            done = !done;
+        }
+
+        // // console.log(box1);
+        // box2.addEventListener('dragover', e=> e.preventDefault());
+        // box2.addEventListener('drop',e=>{
+        //    // let clone = img.cloneNode();
+        //     box2.appendChild(text);
+        //     box2.appendChild(img);
+        // } )
+
+        // box1.addEventListener('dragover', e=> e.preventDefault());
+        // box1.addEventListener('drop',e=>{
+        //    // let clone = img.cloneNode();
+        //     box1.appendChild(text);
+        //     box1.appendChild(img);
+        // } )
+
+
     </script>
 </body>
 </html>
