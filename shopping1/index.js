@@ -2,7 +2,7 @@ const addBtn = document.querySelector('.footer_btn');
 const inputText = document.querySelector('.footer_input');
 var items = document.querySelector('.items');
 let itemList = document.querySelectorAll(".item_row");
-
+console.log(addBtn);
 items.onclick = ()=>{
     if(event.target.classList.contains("item_delete")){
         deleteItem(event.target.parentElement);

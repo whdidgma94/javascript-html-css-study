@@ -31,6 +31,15 @@ function getData(){
     }
 }
 function insertData (name,num,div){
-    div.innerHTML = " ";
+    if(num<=2){
+        div.innerHTML = `<div class="inner" style="width:${num*10}%;background-color:red;">
+        <div class="name">${name}</div>
+        <div class="percent">${num*10}%</div>
+    </div>`; 
+    }else{
+    div.innerHTML = `<div class="inner" style="width:${num*10}%;background-color:#673ab7;">
+    <div class="name">${name}</div>
+    <div class="percent">${num*10}%</div>
+</div>`;}
     
 }

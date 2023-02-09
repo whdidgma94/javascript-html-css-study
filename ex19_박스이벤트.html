@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .boxes{
+            display: flex;
+            gap: 10px;
+            margin: 10px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            margin: 10px;
+            border: 2px solid black;
+            height: 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <input type="text">
+    <script>
+        const boxes = document.querySelector('.boxes');
+        const boxList = document.querySelectorAll('.box');
+        const input = document.querySelector('input');
+        let cnt=1;
+        boxes.addEventListener('click',()=>{
+            if(event.target!=boxes){
+            event.target.innerHTML = cnt;
+            cnt++;
+            }
+        });
+        input.addEventListener('keyup',(event)=>{
+            boxList.forEach(box=>{
+                if(box.innerHTML==input.value){
+                    box.style.backgroundColor = "red";
+                }
+                else{
+                    box.style.backgroundColor = "white";
+                }
+            })
+        });
+    </script>
+</body>
+</html>
