@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table{
+            /* 보이는 화면에 50% */
+            width: 100%; 
+            height: 100vh;
+            border: 1px solid;
+        }
+        tr, td{
+            /* 테이블 내용 중앙정렬 */
+            text-align: center;
+        }
+        td{
+            border: 1px solid gray;
+        }
+        /* table 안에서 행이 홀수인 번째만 선택 */
+        /* tr:nth-child(odd){
+            background-color: lightblue;
+        } */
+        /* table 안에서 행이 짝수번째만 선택 */
+        /* tr:nth-child(even){
+            background-color: lightpink;
+        }
+        tr:nth-child(1) td:nth-child(2) {
+            background-color: lightgreen
+        } */
+        .top{
+            font-weight: bold;
+            font-size: 25px;
+        }
+       
+    </style>
+</head>
+<body>
+    <table>
+        <!-- 테이블의 제목 표시  -->
+        <!-- <caption> 테이블 제목</caption> -->
+        <tr class="title">
+            <td colspan="4">성적표</td>
+        </tr>
+        <tr class="top">
+            <td>QT</td>
+            <td>No</td>
+            <td>name</td>
+            <td>score</td>
+        </tr>
+        <tr>
+            <td rowspan="4">1분기</td>
+            <td>1</td>
+            <td>홍길동</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>홍둘리</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>도우너</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>또치</td>
+            <td>41</td>
+        </tr>
+        <tr>
+            <td colspan="4">테이블의 위치가 맨 하단
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+.content{
+    width: 100px;
+    height: 150px;
+    background-color: beige;
+    border: 1px solid black;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents{
+    width: 80%;
+    background-color: lightgreen;
+}
+.profile{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+button{
+    width: 100px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 50px;
+    color: lightgray;
+}
+.mainView{
+    background-color: aqua;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+.mainView:hover{
+    transform: scale(1.5) translateY(-25px);
+    transition: all 0.5s ease-in-out;
+}
+.contentPreview{
+    height: 80%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contentBox{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.currentView{
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+    position: absolute;
+}
+.rightView{
+    opacity: 0.5;
+    scale: 0.5;
+    position: absolute;
+    right: 30%;
+}
+.leftView{
+    opacity: 0.5;
+    scale: 0.5;
+    position: absolute;
+    left: 30%;
+}
+.contentPreview h1{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    background-color: antiquewhite;
+}
+.contentPreview .previewImg{
+    height: 90%;
+    width: 100%;
+}
