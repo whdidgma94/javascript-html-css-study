@@ -9,7 +9,7 @@ html,body{
 .content{
     width: 100px;
     height: 150px;
-    background-color: beige;
+    background-color: white;
     border: 1px solid black;
     transform: scale(0);
     transition: all 0.5s ease-in-out;
@@ -22,7 +22,8 @@ html,body{
 }
 .contents{
     width: 80%;
-    background-color: lightgreen;
+    background-color: beige
+    
 }
 .profile{
     height: 100%;
@@ -39,7 +40,6 @@ button{
     color: lightgray;
 }
 .mainView{
-    background-color: aqua;
     cursor: pointer;
     position: absolute;
     z-index: 1;
@@ -47,10 +47,11 @@ button{
 .mainView:hover{
     transform: scale(1.5) translateY(-25px);
     transition: all 0.5s ease-in-out;
+    background-color: lightblue;
 }
 .contentPreview{
     height: 80%;
-    background-color: aquamarine;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,9 +82,46 @@ button{
     height: 10%;
     width: 100%;
     text-align: center;
-    background-color: antiquewhite;
 }
 .contentPreview .previewImg{
     height: 90%;
     width: 100%;
+}
+.contentPreview .previewImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.selected{
+    transform: scale(4) translate(0%,-60%);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selected a{
+    display: flex;
+}
+a{
+    display: none;
+}
+.contentHead img{
+    width: 80px;
+    height: 80px;
+}
+.blur{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+.exit{
+    margin-left: 10px;
+    font-size: 15px;
+    display: none;
+
+}
+.selected .exit{
+    display: flex;
 }

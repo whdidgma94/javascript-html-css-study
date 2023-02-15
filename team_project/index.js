@@ -1,6 +1,10 @@
 const contentList = document.querySelectorAll(".content");
 const leftBtn = document.querySelector(".leftBtn");
 const rightBtn = document.querySelector(".rightBtn");
+const contentBox = document.querySelector(".contentBox");
+const contentPreview = document.querySelector(".contentPreview");
+const previewImg = document.querySelector(".previewImg");
+var exit = null;
 var lIdx=contentList.length-1;
 var idx=0;
 var rIdx=1;
@@ -29,7 +33,7 @@ rightBtn.addEventListener('click',()=>{
     showContents();
 })
 function showContents(){
-    
+    previewImg.innerHTML=`<img src="./gif/game${idx}.gif" alt="">`
     addClassName();
 }
 function removeClassName(){
@@ -48,3 +52,24 @@ function addClassName(){
     contentList[idx].classList.add("mainView");
     contentList[lIdx].classList.add("leftView");
 }
+contentBox.addEventListener('click',(e)=>{
+    if(e.target==contentList[idx]||e.target.parentElement==contentList[idx]||e.target.parentElement.parentElement==contentList[idx]){
+        if(e.target!=exit){
+        contentList[idx].classList.add("selected");
+        contentList[idx].classList.remove("mainView");
+        contentPreview.classList.add("blur");
+        exit=contentList[idx].firstElementChild;
+        exitActive();
+        leftBtn.style.visibility = "hidden";
+        rightBtn.style.visibility = "hidden";
+    }
+    }
+})
+function exitActive(){
+exit.addEventListener('click',()=>{
+    contentList[idx].classList.remove("selected");
+    contentList[idx].classList.add("mainView");
+    contentPreview.classList.remove("blur");
+    leftBtn.style.visibility = "visible";
+    rightBtn.style.visibility = "visible";
+})}
