@@ -1,8 +1,7 @@
 class Bullet {
     constructor() {
         this.radius = 15;
-        this.speed;
-        this.color = "orange";
+        this.speed = 5;
         this.x;
         this.y;
         this.dx;
@@ -10,12 +9,11 @@ class Bullet {
         this.cWidth = 800;
         this.cHeight = 400;
     }
-    init() {
-            this.x = this.cWidth - 10;
-            this.y = Math.random() * (this.cHeight - this.radius); 
-            this.speed = Math.floor(Math.random()*4)+1;
-        let dx = 200 - this.x;
-        let dy = Math.random() * (this.cHeight - this.radius) - this.y;
+    init(px,py) {
+        this.x = px+50;
+        this.y = py; 
+        let dx = this.cWidth;
+        let dy = py;
         let c = Math.sqrt(dx * dx + dy * dy);
         this.dx = dx / c;
         this.dy = dy / c;
@@ -31,21 +29,16 @@ class Bullet {
     }
     render(ctx) {
         ctx.beginPath();
-        ctx.fillStyle=this.color;
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fill();
         ctx.closePath();
+        ctx.fillStyle = "orange";
+        ctx.fill();
     }
-    render2(ctx){
-    ctx.beginPath();
-    ctx.fillStyle = "red";
-    ctx.fillText("1",this.x,this.y+10);
-    ctx.closePath();
-    }
-    collision(px, py, size) {
-        let pdw = this.x - px;
-        let pdh = this.y - py;
-        let pdc = pdw * pdw + pdh * pdh;
-        return Math.pow(size + this.radius, 2) > pdc;
+
+    collision(rx, ry, size) {
+        let rdw = this.x - rx;
+        let rdh = this.y - ry;
+        let rdc = rdw * rdw + rdh * rdh;
+        return Math.pow(size + this.radius, 2) > rdc;
     }
 }
