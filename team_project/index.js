@@ -33,7 +33,11 @@ rightBtn.addEventListener('click',()=>{
     showContents();
 })
 function showContents(){
-    previewImg.innerHTML=`<img src="./gif/game${idx}.gif" alt="">`
+    if(idx!=0){
+        previewImg.innerHTML=`<img src="./gif/game${idx}.gif" alt="">`
+    }else{
+        previewImg.innerHTML=``;
+    }
     addClassName();
 }
 function removeClassName(){
@@ -73,3 +77,8 @@ exit.addEventListener('click',()=>{
     leftBtn.style.visibility = "visible";
     rightBtn.style.visibility = "visible";
 })}
+function openTicTacTo(){
+    previewImg.innerHTML=``
+    contentList[idx].classList.add("mainView");
+    contentList[idx].classList.remove("selected");
+}

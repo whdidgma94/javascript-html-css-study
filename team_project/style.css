@@ -125,3 +125,10 @@ a{
 .selected .exit{
     display: flex;
 }
+a{
+    text-decoration: none;
+    background-color: lightgrey;
+    border-radius: 3px;
+    color: black;
+    border: 1px solid lightgreen;
+}

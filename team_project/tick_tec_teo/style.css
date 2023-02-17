@@ -6,8 +6,11 @@
 body, html{
     height: 100%;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 .container{
-    height: 100%;
+    height: calc(100% - 25px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,4 +48,14 @@ table{
     justify-content: center;
     align-items: center;
     font-weight: bold;
+}
+.exit{
+    height: 20px;
+    width: 20px;
+    background: none;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
 }
