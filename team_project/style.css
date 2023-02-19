@@ -86,6 +86,7 @@ button{
 .contentPreview .previewImg{
     height: 90%;
     width: 100%;
+    position: relative;
 }
 .contentPreview .previewImg img{
     height: 100%;
@@ -131,4 +132,10 @@ a{
     border-radius: 3px;
     color: black;
     border: 1px solid lightgreen;
+}
+.contentPreview .previewImg iframe{
+    position: absolute;
+    border: none;
+    height: 100%;
+    width: 100%;
 }

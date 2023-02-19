@@ -5,11 +5,14 @@
 }
 body, html{
     height: 100%;
+    width: 100%;
 }
 body::-webkit-scrollbar{
     display: none;
 }
 .container{
+    height: 100%;
+    width: 100%;
     height: calc(100% - 25px);
     display: flex;
     flex-direction: column;
@@ -28,14 +31,16 @@ button{
     cursor: pointer;
 }
 td{
-    height: 200px;
-    width: 200px;
+    height: 30%;
+    width: 30%;
     background-color: bisque;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
 }
 table{
+    height: 100%;
+    width: 100%;
     text-align: center;
     font-size: 60px;
 }
@@ -48,14 +53,4 @@ table{
     justify-content: center;
     align-items: center;
     font-weight: bold;
-}
-.exit{
-    height: 20px;
-    width: 20px;
-    background: none;
-    margin: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    color: black;
 }

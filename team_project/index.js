@@ -4,6 +4,7 @@ const rightBtn = document.querySelector(".rightBtn");
 const contentBox = document.querySelector(".contentBox");
 const contentPreview = document.querySelector(".contentPreview");
 const previewImg = document.querySelector(".previewImg");
+var startBtn = null;
 var exit = null;
 var lIdx=contentList.length-1;
 var idx=0;
@@ -58,11 +59,12 @@ function addClassName(){
 }
 contentBox.addEventListener('click',(e)=>{
     if(e.target==contentList[idx]||e.target.parentElement==contentList[idx]||e.target.parentElement.parentElement==contentList[idx]){
-        if(e.target!=exit){
+        if(e.target!=exit&&e.target!=startBtn){
         contentList[idx].classList.add("selected");
         contentList[idx].classList.remove("mainView");
         contentPreview.classList.add("blur");
         exit=contentList[idx].firstElementChild;
+        startBtn=contentList[idx].lastChild;
         exitActive();
         leftBtn.style.visibility = "hidden";
         rightBtn.style.visibility = "hidden";
@@ -76,9 +78,15 @@ exit.addEventListener('click',()=>{
     contentPreview.classList.remove("blur");
     leftBtn.style.visibility = "visible";
     rightBtn.style.visibility = "visible";
-})}
-function openTicTacTo(){
-    previewImg.innerHTML=``
-    contentList[idx].classList.add("mainView");
+})
+startBtn.addEventListener('click',()=>{
+    console.log("1");
     contentList[idx].classList.remove("selected");
+    contentList[idx].classList.add("mainView");
+    contentPreview.classList.remove("blur");
+    leftBtn.style.visibility = "visible";
+    rightBtn.style.visibility = "visible";
+})
 }
+
+

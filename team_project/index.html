@@ -24,28 +24,33 @@
                         <div class="contentHead">팀원소개 <br>
                             <img src="./tick_tec_teo/틱택토.png" alt="팀원소개" draggable="false">
                         </div>
-                        <a href="./intro/index.html">소개페이지</a>
-                    </div>
+                        <a href="./intro/index.html">소개페이지</a></div>
 
-                    <div class="content">
+                    <div class="content tictacto">
                         <button class="exit">X</button>
                         <div class="contentHead">틱택토 <br>
                             <img src="./tick_tec_teo/틱택토.png" alt="틱택토" draggable="false">
                         </div>
-                        <a href="#" onclick="openTicTacTo()">게임 시작</a>
-                    </div>
+                        <a href="#" onclick="openTicTacTo()">게임 시작</a></div>
 
                     <div class="content">
                         <button class="exit">X</button>
                         <div class="contentHead">슈팅 <br>
                             <img src="./shooting/슈팅.png" alt="슈팅" draggable="false">
                         </div>
-                        <a href="./shooting/game.html">게임 시작</a>
-                    </div>
+                        <a href="#" onclick="openShooting()">게임 시작</a></div>
 
                 </div>
             </div>
         <button class="rightBtn">></button>
+        <script>
+            function openTicTacTo(){
+            previewImg.innerHTML=`<iframe src="./tick_tec_teo/index.html"></iframe>`;
+            }
+            function openShooting(){
+            previewImg.innerHTML=`<iframe src="./shooting/game.html"></iframe>`;
+            }
+        </script>
     </div>
 </body>
 </html>
