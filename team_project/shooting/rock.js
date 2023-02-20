@@ -2,7 +2,7 @@ class Rock {
     constructor() {
         this.radius = 30;
         this.speed;
-        this.style = Math.floor(Math.random()*4);
+        this.style;
         this.x;
         this.y;
         this.dx;
@@ -16,6 +16,7 @@ class Rock {
         this.y = Math.random() * (this.cHeight - this.radius); 
         this.speed = Math.floor(Math.random()*4)+1;
         this.hp = Math.floor(Math.random()*4)+1;
+        this.style = Math.floor(Math.random()*4);
         let dx = 200 - this.x;
         let dy = Math.random() * (this.cHeight - this.radius) - this.y;
         let c = Math.sqrt(dx * dx + dy * dy);

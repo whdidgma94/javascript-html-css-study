@@ -22,11 +22,10 @@
                     <div class="content">
                         <button class="exit">X</button>
                         <div class="contentHead">팀원소개 <br>
-                            <img src="./tick_tec_teo/틱택토.png" alt="팀원소개" draggable="false">
                         </div>
-                        <a href="./intro/index.html">소개페이지</a></div>
+                        <a href="#" onclick="openIntro()">소개페이지</a></div>
 
-                    <div class="content tictacto">
+                    <div class="content">
                         <button class="exit">X</button>
                         <div class="contentHead">틱택토 <br>
                             <img src="./tick_tec_teo/틱택토.png" alt="틱택토" draggable="false">
@@ -40,15 +39,43 @@
                         </div>
                         <a href="#" onclick="openShooting()">게임 시작</a></div>
 
+                    <div class="content">
+                        <button class="exit">X</button>
+                        <div class="contentHead">1to50 <br>
+                            <img src="./1to50/1to50.png" alt="1to50" draggable="false">
+                        </div>
+                        <a href="#" onclick="open1to50()">게임 시작</a></div>
+
+                    <div class="content">
+                        <button class="exit">X</button>
+                        <div class="contentHead">인디언포커 <br>
+                            <img src="./indianPoker/인디언포커.png" alt="인디언포커" draggable="false">
+                        </div>
+                        <a href="#" onclick="openIndianPoker()">게임 시작</a></div>
                 </div>
             </div>
         <button class="rightBtn">></button>
         <script>
+            const head = document.querySelector("h1");
+            function openIntro(){
+                previewImg.innerHTML=`<iframe src="./intro/index.html"></iframe>`;
+                head.innerHTML="팀원 소개";
+            }
             function openTicTacTo(){
             previewImg.innerHTML=`<iframe src="./tick_tec_teo/index.html"></iframe>`;
+                head.innerHTML="틱택토";
             }
             function openShooting(){
             previewImg.innerHTML=`<iframe src="./shooting/game.html"></iframe>`;
+                head.innerHTML="슈팅게임";
+            }
+            function open1to50(){
+            previewImg.innerHTML=`<iframe src="./1to50/1to50.html"></iframe>`;
+                head.innerHTML="1to50";
+            }
+            function openIndianPoker(){
+            previewImg.innerHTML=`<iframe src="./indianPoker/project.html"></iframe>`;
+                head.innerHTML="인디언포커";
             }
         </script>
     </div>

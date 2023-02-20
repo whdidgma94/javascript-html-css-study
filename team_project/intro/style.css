@@ -34,3 +34,15 @@ h1{
 h2{
     margin-bottom: 10px;
 }
+.member div{
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    font-size: 30px;
+    padding: 5px;
+}

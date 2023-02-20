@@ -39,6 +39,7 @@ function showContents(){
     }else{
         previewImg.innerHTML=``;
     }
+    head.innerHTML="프리뷰";
     addClassName();
 }
 function removeClassName(){

@@ -75,6 +75,7 @@ function draw() {
         bulletInit();
         check=0;
     }
+    check++;
     bulletList.forEach((b) => {b.update()});
     bulletList.forEach((bullet) => {
         rockList.forEach((rock) => {
@@ -103,7 +104,6 @@ function draw() {
     }
     bulletList.forEach((b) => {b.render(ctx);});
     rockList.forEach((b) => { b.render(ctx); b.render2(ctx); });
-    check++;
 }
 function drawScore() {
     ctx.beginPath();
@@ -149,4 +149,3 @@ function gameOver() {
     startBtn.innerHTML="Restart?";
     startBtn.style.visibility = "visible";
 }
-
